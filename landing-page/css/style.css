@@ -1,0 +1,284 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ATous Style */
+
+body{
+    background-color: #F7F7FF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    
+}
+
+.grid{ /* To set the webpage at the middle */
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+}
+
+.containertext p{
+    font-size: 24px;
+    line-height: 29px;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    padding: 15px 25px;
+}
+
+.containertable{
+    background-color: #FFFFFF;
+    box-shadow: 5px 10px 15px #33313156;
+    width: 300px;
+    height: 495px;
+    border-radius: 26px ;
+    margin: 0 auto 45px auto;
+}
+
+input[type=text] { 
+    width: 230px;
+    height: 40px;
+    margin: 7.5px 20px;
+    padding: 0px 15px ;
+    background-color: #F4F4F5;
+    color:#9B9B9B;
+    border-radius: 11px ;
+    border: none;
+}
+
+input[type=checkbox] {
+    margin: 10px 0px 10px 25px;
+}
+
+#drivebutton{
+    background-color: #57EEAB;
+    color:#333131;
+    font-weight: bold;
+    font-size: 24px;
+    width: 250px;
+    height: 55px;
+    border-radius: 11px ;
+    border: none;
+    margin: 7.5px 25px;
+}
+
+.containertable p{ 
+    margin: 10px 25px;
+}
+
+a{
+    color: #FF8480;
+}
+
+footer {
+    background-color: #FFFD8C;
+    padding: 25px 0px;
+}
+
+.container-footer{
+    width: 300px;
+    margin: 0 auto;
+}
+
+#hours{ 
+    background-color: #F7F7FF;
+    color:#707070;
+    font-weight: 500;
+    width: 38px;
+    margin: 15px 0px;
+}
+
+#city{ 
+    background-color: #F7F7FF;
+    color:#707070;
+    font-weight: 500;
+    width: 190px;
+    margin: 15px 0px 15px 10px;
+}
+
+#cbutton{
+    background-color: #ff8480;
+    color:#F7F7FF;
+    width: 300px;
+    height: 40px;
+    border-radius: 11px ;
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.icons{ /* To set the icons in the right spot */
+    padding-top: 32px;
+    display: grid;
+    width: 260px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+} 
+
+footer h4{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer p{
+    padding-top: 15px;
+}
+
+@media (min-width: 768px) {
+
+    h1{
+        font-size: 80px;
+        line-height: 97px;
+    }
+
+    p{
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .containerimg{ /*To set the image to the corresponding size for the layout*/
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .containertable{
+        width: 605px;
+        height: 596px;
+        margin-bottom: 105px; /* To fix the missing space between form and footer */
+    }
+
+    input[type=text] {
+        width: 85%;
+        height: 55px;
+        margin-left: 25px;
+    }
+
+    #drivebutton{
+        font-size: 32px;
+        width: 90%;
+        height: 55px;
+    }
+
+    .containertable p:last-child {
+        font-size: 17px;
+    }
+
+    .container-footer{
+        width: 608px; 
+    }
+
+    .container-footer p{
+        font-size: 16px;
+    }
+
+    #hours{ 
+        width: 95px;
+        height: 40px;
+        margin: 10px 0px;    
+    }
+
+    #city{ 
+        width: 190px;
+        height: 40px;
+        margin: 10px 0px 10px 10px;
+    }
+
+    #cbutton{
+        width: 240px;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1920px) {
+
+    .wrapper-grid { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+        "containertext containerimg containertable"
+    }
+
+    .containertext { grid-area: containertext; }
+    .containerimg { grid-area: containerimg; }
+    .containertable { grid-area: containertable;}
+    
+    .containerimg{
+        width: 819.36px;
+        margin: 0 auto;
+    }
+
+    .containertable{
+        width: 535px;
+        height: 590px;
+        margin-bottom: 105px;
+    }
+
+    .container-footer{
+        width:1700px ;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        "ftext ftext ftext icons"
+        "calculate calculate calculate icons"
+    }
+
+    .footer-text{grid-area: ftext;}
+    .calculate{grid-area: calculate;}
+    .icons{grid-area: icons;}
+}
