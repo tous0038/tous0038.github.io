@@ -6,7 +6,7 @@
     display: grid;
     grid-gap: 22px; 
 }
-.toppings h2, h5, p {
+.toppings h2,.toppings h5,.toppings p {
     text-align: center;
 }
 .toppings img{
@@ -16,54 +16,55 @@
     justify-content: center;
 }
 
-
-/*
-.toppings{
-
-    grid-template-rows: 160px 1fr 1fr 30px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-    "topping topping "
-    "sprinkles caramel "
-    "chocolat gummies "
-    ". more ";
-}
-
-.toppings-text {
-    grid-area: topping;
-}
-
-.toppings-sprinkles {grid-area: sprinkles;}
-.toppings-caramel {grid-area: caramel;}
-.toppings-chocolate {grid-area: chocolat;}
-.toppings-gummies {grid-area: gummies;}
-
-/*flex-end and start puts the images close to the gap */
-/*.toppings-sprinkles,.toppings-chocolate{
-    display: flex;
-    justify-content: flex-end;
-}
-.toppings-caramel,.toppings-gummies{
-    display: flex;
-    justify-content: flex-start;
-}
-
-
 @media (min-width: 800px){
-    .toppings-more {
-        margin-right: 30px;
-    }
-
-}
-
-@media (min-width: 1280px){
-
     .toppings{
-        grid-template-rows: 200px 1fr 30px;
+        grid-template-rows: 160px 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "topping topping "
+        "sprinkles caramel "
+        "chocolat gummies "
+        "oreo marshmallows"
+        "nuts .";
+    }
+    .toppings div{
+        width: 80%;
+        margin: auto;
+    }
+    
+    .toppings-text {
+        grid-area: topping;
+    }
+    .toppings-sprinkles {
+        grid-area: sprinkles;
+    }
+    .toppings-caramel {
+        grid-area: caramel;
+    }
+    .toppings-chocolate {
+        grid-area: chocolat;
+    }
+    .toppings-gummies {
+        grid-area: gummies;
+    }
+    .toppings-oreo {
+        grid-area: oreo;
+    }
+    .toppings-marshmallows {
+        grid-area: marshmallows;
+    }
+    .toppings-nuts {
+        grid-area: nuts;
+    }
+}
+@media (min-width: 1280px){
+    .toppings{
+        grid-template-rows: 160px 1fr 1fr ;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
-        "topping topping topping topping"
+        "topping topping topping topping "
         "sprinkles caramel chocolat gummies "
-        ". . . more ";
+        "oreo marshmallows nuts .";
     }
-} */
+
+}
