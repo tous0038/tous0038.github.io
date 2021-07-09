@@ -1,0 +1,192 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 20px;
+}
+h1,h2{
+    font-family: 'Made Sunflower', serif;
+}
+h1{
+    font-size:50px;
+    margin: 0;
+}
+h2{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 30px;
+    font-weight: normal ;
+}
+h4{ 
+    margin-top: 0; /*to set the second row near the logo*/
+}
+h5{
+    font-family: 'made sunflower';
+    font-size: 30px;
+}
+.container{
+    width:100%;
+    margin: auto;
+}
+section, footer{
+    padding: 10px 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+header img{
+    width:70px;
+    height:auto;
+}
+nav{
+    display:grid;
+    text-align: center;
+}
+nav a{
+    color: #707070;
+    text-decoration: none;  
+}
+nav div, button {
+    padding: 20px 0;
+    
+}
+nav div:hover {
+    background-color:#A79BBF ;
+    color: white;
+}
+nav div:nth-child(1):hover{ /*to add an background color exception*/
+    background-color: white;
+}
+nav button{
+    background-color: white;
+    color: #707070;
+    border: none;
+}
+.welcome input{
+    width: 154px;
+    height: 40px;
+    background-color: white;
+    border-radius: 18px;
+    border:none;
+    font-weight: bold;
+    color: #A79BBF;
+    
+}
+.welcome input:hover{
+    color: #707070;
+}
+
+footer{
+    background-color: #8FB4DE;
+    color: white;  
+}
+footer .container{
+    display:grid;
+    grid-gap: 20px ;
+    grid-template-rows: 230px 1fr 1fr ;
+    grid-template-columns:2fr 3fr;
+    grid-template-areas: 
+    "logo logo "
+    "site follow "
+    "schedule schedule ";
+}
+.site-map p, .schedule p{
+    margin: 10px 0px 10px 0px;
+}
+.logo-footer {
+    grid-area: logo;
+    width: 230px;
+    height: 185px;  
+    margin: 0px auto 0px auto; /*auto: set the image in the middle of the page*/
+}
+.site-map {
+    grid-area: site;
+}
+
+.follow {
+    grid-area: follow;
+}
+.follow div{
+    display:inline-flex; /*set the text inline with the social media images*/
+    margin: 0px 0px 10px 0px;
+}
+.follow img{
+    width: 28px;
+    height: 28px;
+}
+.follow p{
+    margin: 0px 0px 0px 10px;
+}
+.schedule {
+    grid-area: schedule;
+}
+.copyright{
+    text-align: center;
+    margin-top: 0;
+}
+
+@media (min-width: 800px){
+    nav{
+       grid-template-columns: repeat(9, 1fr);
+       grid-template-areas: 
+       "home toppings contact . logo1 . . . search";
+    }
+    nav div:nth-child(1){
+       grid-area:logo1;
+       padding: 0;
+    }
+    nav div:nth-child(2){
+       grid-area:home; 
+       margin: auto 0 auto 0;
+    }
+    nav div:nth-child(3){
+       grid-area:toppings;
+       margin: auto 0 auto 0;
+    }
+    nav div:nth-child(4){
+        grid-area:contact;
+        margin: auto 0 auto 0;
+    }
+    nav button{grid-area: search;
+    padding:0;
+    }
+    footer .container{
+        margin-top: 20px;
+        grid-template-rows: 1fr 130px ;
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-areas: 
+        "logo site follow"
+        ". schedule schedule ";
+    }
+    .logo-footer{
+        margin-top: -27px; /*puts image align with the subtitles*/
+    }
+    .copyright{
+        margin-top: 20px;
+    }
+}
+@media (min-width: 1280px){
+    h1{
+        font-size:70px;
+    }
+    h2{
+        font-size: 50px;
+    }
+    section p{
+        font-size: 30px;
+    }
+    section, footer{
+        padding: 10px 30px;
+    }
+    footer .container{
+        margin-top: 30px
+    }
+}
+
+
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--=========
+    <link href="//db.onlinewebfonts.com/c/43cb06ffbdca47126d0b5a2eec7e90ae?family=MADE+Sunflower" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/1a991b240e707c46ca904d731893f108?family=Neue+Montreal" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/7980cc1889b6b0b264dc47cca659f7c2?family=Neue+Montreal" rel="stylesheet" type="text/css"/>
+    =======-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact-style.css">
+    <script src="https://kit.fontawesome.com/31883d2731.js" crossorigin="anonymous"></script>
+    <title>Bubbly & Cream</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div>
+                    <a class="logo"><img src="images/blacklogo-640.png" alt="Bubbly & cream logo"></a> <!--the class is to add an background color exception in the hover state-->
+                </div>
+                <div>
+                    <a href="index.html">Home</a>
+                </div>
+                <div>
+                    <a href="toppings.html">Toppings</a>
+                </div>
+                <div>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <button><i class="fas fa-search"></i></button>
+            </nav>
+        </header>
+        <main>
+            <section class="toppings"> <!--put content in section element to add the same background behind all div siblings-->
+                <div class="toppings-text">
+                    <h2>Contact Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam onummy nibh euismod tincidunt ut laoreet dolore.</p>
+                </div>
+                <div class="toppings-sprinkles">
+                   
+                </div>
+                <div class="toppings-caramel">
+                    <img
+                    srcset="images/caramel-480.jpg 480w, 
+                            images/caramel-640.jpg 640w,
+                            images/caramel-800.jpg 800w"
+                    sizes="(min-width: 600px)   35vw, 45vw
+                    "                      
+                    src="images/caramel-800.jpg"
+                    alt="caramel">
+                </div>
+                
+                <div class="toppings-more">
+                    <input type="button" class="btn-more" value="View More" ><img src="images/arrow-480.png" alt="arrow">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="logo-footer">
+                    <img src="images/whitelogo-640.png" alt="Bubbly & cream logo">
+                </div>
+                <div class="site-map">
+                    <h4> Site Map </h4>
+                    <p>Home</p>
+                    <p>Contact</p>
+                    <p>About Us</p>
+                </div>
+                <div class="follow">
+                    <h4> Follow Us </h4>
+                    <div>
+                        <img src="images/whitefacebook-640.png" alt="facebook icon"><p>@Bubbles & Cream</p>
+                    </div>
+                    <div>
+                        <img src="images/whiteinstagram-640.png" alt="instagram icon">
+                        <p>@Bubbles & Cream</p>
+                    </div>
+
+                </div>
+                <div class="schedule">
+                    <h4>Schedule</h4>
+                    <p>Mon - Fri   10:00 am - 6:00 pm</p>
+                    <p>Sat - Sun  10:00 am - 10:00 pm</p>
+                </div>
+            </div>
+            <p class="copyright">© 2021 Andrea Tous</p> <!--element ouside of div container to keep it outside the grid created for the footer-->
+        </footer>
+    </div>
+</body>
+</html>

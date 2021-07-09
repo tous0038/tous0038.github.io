@@ -1,0 +1,14 @@
+
+
+.toppings{
+    background-color: #FDF3A9;
+    display: grid;
+    grid-gap: 22px; 
+}
+.toppings h2, h5, p {
+    text-align: center;
+}
+.toppings img{
+    display: flex;
+    justify-content: center;
+}

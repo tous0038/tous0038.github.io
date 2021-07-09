@@ -1,0 +1,114 @@
+.welcome{
+    background-color: #A79BBF;
+    display: grid;
+    color: white;
+    padding-bottom: 20px;
+}
+.flavours{
+    display: grid; 
+}
+.flavours div{ /*puts the images in the middle of the page*/
+    margin: 0px auto 0px auto;
+}
+.flavours-text, h3{
+    text-align: center;
+}
+.toppings{
+    background-color: #FDF3A9;
+    display: grid;
+    grid-gap: 22px;
+    grid-template-rows: 160px 1fr 1fr 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "topping topping "
+    "sprinkles caramel "
+    "chocolat gummies "
+    ". more ";
+}
+
+.toppings-text {
+    grid-area: topping;
+    text-align: center;
+}
+.toppings-sprinkles {grid-area: sprinkles;}
+.toppings-caramel {grid-area: caramel;}
+.toppings-chocolate {grid-area: chocolat;}
+.toppings-gummies {grid-area: gummies;}
+.toppings-more {
+    grid-area: more;
+    display:inline-flex; /*set the text inline with the arrow image*/
+    justify-self:right; 
+}
+/*flex-end and start puts the images close to the gap */
+.toppings-sprinkles,.toppings-chocolate{
+    display: flex;
+    justify-content: flex-end;
+}
+.toppings-caramel,.toppings-gummies{
+    display: flex;
+    justify-content: flex-start;
+}
+.toppings img{
+    border-radius: 23px;
+    margin-left: 5px;
+}
+.toppings input{
+    background-color:#FDF3A9;
+    border:none;
+}
+.toppings-more img{
+    width: 29px;
+    height: 29px;
+}
+
+@media (min-width: 800px){
+    .welcome{ 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .welcome-text{
+        margin: auto 50px auto 0px;
+    }
+    .flavours{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 150px 1fr 1fr;
+        grid-template-areas: 
+        "flavours flavours"
+        "fgreen fblue"
+        "fpurple .";
+    }
+    .flavours-text{ 
+        grid-area: flavours;
+    }
+    .flavours-green{
+        grid-area: fgreen;
+    }
+    .flavours-blue{
+        grid-area: fblue;
+    }
+    .flavours-purple{
+        grid-area: fpurple;
+    }
+    .toppings-more {
+        margin-right: 30px;
+    }
+
+}
+@media (min-width: 1280px){
+
+
+    .flavours{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 200px 1fr;
+        grid-template-areas: 
+        "flavours flavours flavours"
+        "fgreen fblue fpurple";
+    }
+    .toppings{
+        grid-template-rows: 200px 1fr 30px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "topping topping topping topping"
+        "sprinkles caramel chocolat gummies "
+        ". . . more ";
+    }
+}
