@@ -1,10 +1,14 @@
+# NOTE:Contact category (I do not need heading for this section :) ) 
+Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+From line 65, column 13; to line 65, column 44
+
+
 # References
 
 Typography
 MADE Sunflower
 https://www.dafont.com/made-sunflower.font
 Neue Montreal
-https://www.onlinewebfonts.com/download/1a991b240e707c46ca904d731893f108
 https://www.onlinewebfonts.com/download/7980cc1889b6b0b264dc47cca659f7c2
 
 

@@ -67,20 +67,6 @@ nav button{
     color: #707070;
     border: none;
 }
-.welcome input{
-    width: 154px;
-    height: 40px;
-    background-color: white;
-    border-radius: 18px;
-    border:none;
-    font-weight: bold;
-    color: #A79BBF;
-    
-}
-.welcome input:hover{
-    color: #707070;
-}
-
 footer{
     background-color: #8FB4DE;
     color: white;  
@@ -95,8 +81,13 @@ footer .container{
     "site follow "
     "schedule schedule ";
 }
-.site-map p, .schedule p{
+.site-map a, .schedule p{
     margin: 10px 0px 10px 0px;
+}
+.site-map a{
+    text-decoration:none;
+    display:flex;
+    color: white;
 }
 .logo-footer {
     grid-area: logo;
@@ -106,28 +97,35 @@ footer .container{
 }
 .site-map {
     grid-area: site;
+    
 }
 
 .follow {
     grid-area: follow;
 }
 .follow div{
-    display:inline-flex; /*set the text inline with the social media images*/
-    margin: 0px 0px 10px 0px;
+    display:flex; /*set the text inline with the social media images*/
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 10px;
 }
 .follow img{
     width: 28px;
     height: 28px;
+    margin-right: 10px;
 }
-.follow p{
-    margin: 0px 0px 0px 10px;
+.follow a{
+ 
+    text-decoration:none;
+    color: white;
 }
 .schedule {
     grid-area: schedule;
 }
 .copyright{
+    font-size: 15px;
     text-align: center;
-    margin-top: 0;
+    
 }
 
 @media (min-width: 800px){
