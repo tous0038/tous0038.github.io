@@ -1,1 +1,122 @@
-/*contact*/
+
+section h2{
+    text-align: center;
+}
+.contact{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 80px 270px 160px repeat(6, 1fr) ; 
+    grid-gap: 20px;
+    grid-template-areas: 
+    "contact contact"
+    "map map"
+    "sprinkles icecream"
+    "location location"
+    "facebook facebook"
+    "instagram instagram"
+    "telephone telephone"
+    "email email"
+    "chat chat" ;
+}
+
+.contact-title{
+    grid-area: contact;
+}
+.contact-maps{
+
+    grid-area: map;
+}
+.contact-sprinkles{
+    grid-area:sprinkles;
+    
+}
+.contact-icecream{
+    grid-area:icecream;
+    
+}
+.contact-sprinkles img, .contact-icecream img {
+    border-radius: 23px;
+    width: 100%;
+    height: auto;
+}
+.contact-maps iframe{
+    border-radius: 23px;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-location img, .contact-facebook img, .contact-instagram img,.contact-tel img, .contact-email img, .contact-chat img{
+    width: 66px;
+    height: 66px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.contact-facebook p, .contact-instagram p, .contact-chat p{
+    margin-top: 0px;
+}
+.contact-location{
+    grid-area: location ;
+    display:inline-flex; /*set the text inline with the image*/
+    margin-left: 40px;
+}
+.contact-facebook{
+    grid-area: facebook ;
+    display:inline-flex;
+    margin-left: 40px;
+}
+.contact-instagram{
+    grid-area: instagram;
+    display:inline-flex;
+    margin-left: 40px;
+}
+.contact-tel{
+    grid-area: telephone;
+    display:inline-flex;
+    margin-left: 40px;
+}
+.contact-email{
+    grid-area: email;
+    display:inline-flex;
+    margin-left: 40px;
+}
+.contact-chat{
+    grid-area: chat;
+    display:inline-flex;
+    margin-left: 40px;
+}
+
+@media (min-width: 800px){
+    .contact {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100px 140px 140px 1fr 1fr 1fr ; 
+        grid-template-areas: 
+        "contact contact contact contact"
+        "map map map sprinkles"
+        "map map map icecream"
+        "location location telephone telephone"
+        "facebook facebook email email"
+        "instagram instagram chat chat" ;
+
+
+        /*grid-template-rows: 100px 174px 174px repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "contact contact contact contact"
+        "map map map sprinkles"
+        "map map map icecream "
+        "location telephone"
+        "facebook email"
+        "instagram chat" ; */
+    }
+    .contact-maps iframe{
+        margin-left: 50px;
+        width: 90%;
+
+    }
+    
+}
+@media (min-width: 1280px){
+    .contact {
+        grid-template-rows: 100px 220px 220px 1fr 1fr 1fr ; 
+    }
+}
