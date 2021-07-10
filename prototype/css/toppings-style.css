@@ -1,6 +1,3 @@
-*{
-    box-sizing:border-box;
-}
 .toppings{
     background-color: #FDF3A9;
     display: grid;
@@ -9,11 +6,16 @@
 .toppings h2,.toppings h5,.toppings p {
     text-align: center;
 }
+.toppings h5{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
 .toppings img{
     border-radius: 23px;
     margin: 0px auto 0px auto;
     display: flex;
     justify-content: center;
+    
 }
 
 @media (min-width: 800px){
@@ -59,7 +61,7 @@
 }
 @media (min-width: 1280px){
     .toppings{
-        grid-template-rows: 160px 1fr 1fr ;
+        grid-template-rows: 200px 1fr 1fr ;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
         "topping topping topping topping "
