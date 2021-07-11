@@ -2,7 +2,7 @@
     background-color: #A79BBF;
     display: grid;
     color: white;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 .welcome a{
     background-color: white;
@@ -11,11 +11,43 @@
     text-decoration:none;
     font-weight: bold;
     color: #A79BBF;
-    
 }
 .welcome a:hover{
     color: #707070;
 }
+.welcome p{
+    padding-bottom: 20px;
+}
+.welcome-image{
+    animation-name: icecream;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+@keyframes icecream{
+    0%{
+      transform: translate(-1000px, 0px);
+    }
+    100%{
+       transform: translate(10px, 0px);
+    }  
+}
+.welcome-image:hover{
+    animation-name: hove-icecream;
+    animation-delay: 0s;
+}
+@keyframes hover-icecream{
+    0%{
+      transform: translate(-1000px, 0px);
+    }
+    100%{
+       transform: translate(10px, 0px);
+    }  
+}
+
 .flavours{
     display: grid; 
 }
@@ -65,6 +97,23 @@
     border-radius: 23px;
     margin-left: 5px;
 }
+.toppings img:hover{
+    animation-name: toppings-images;
+    animation-duration: 5s;
+    cursor: pointer;
+}
+
+@keyframes toppings-images{
+    0%{
+        opacity: 1; 
+    }
+    50%{
+        opacity: 0.1; transition: 0.3s;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .toppings a{
     text-decoration:none;
     color: #000;
@@ -74,8 +123,47 @@
     height: 29px;
 }
 
+.toppings-more{
+    animation-name: viewmore;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    
+}
+@keyframes viewmore{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+         transform: scale(1);
+    }
+}
+.toppings-more:hover{
+    animation-name: hover-viewmore;
+    animation-delay: 0s;
+    cursor: pointer;
+}
+@keyframes hover-viewmore{
+    0%{
+        transform: translate(0px, 0px);
+      }
+      50%{
+         transform: translate(50px, 0px);
+      }  
+      100%{
+          transform: translate(0px, 0px);
+    } 
+}
+
 @media (min-width: 800px){
     .welcome{ 
+        padding-bottom: 0px;
         grid-template-columns: repeat(2, 1fr);
     }
     .welcome-text{
