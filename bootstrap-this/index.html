@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Bootstrap This World!</title>
+  </head>
+  <body>
+        <header> 
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark ">  <!--Make the nav responsive with a change in the medium breakpoint and set the colour scheme -->
+                <div class="container"> <!--Add space between the links and the edge-->
+                    <a href="#intro" class="navbar-brand">Bootstrap Wold</a> <!--Set the link without decoration and add hierarchy to the brand with size and colour-->
+                    <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mobilenav">
+                        <span class="navbar-toggler-icon"></span> <!-- Add the hamburger menu in the mobile breakpoint-->
+                    </button><!--data-bs-toggle="dropdown" is always required to be present on the dropdown’s trigger element. and data-bs-targer set  a CSS selector to apply the collapse to. -->
+                        <div class="collapse navbar-collapse " id="mobilenav"> <!--hide the navbar content using a parent breakpoint   -->
+                            <ul class="navbar-nav ms-auto"> <!--ms-auto: push items to the left-->
+                                <li class="nav-item">
+                                    <a href="#mobile" class="nav-link">Mobile First</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#layout" class="nav-link">Layout</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#components" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Components</a>  <!--Activate the action of the dropdown-->
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!--Show the items inside of the dropdown-->
+                                    <li><a class="dropdown-item" href="#c-library">Components Library</a></li>
+                                    <li><a class="dropdown-item" href="#alert">Alerts</a></li>
+                                    <li><a class="dropdown-item" href="#">Breadcrumbs</a></li>
+                                    <li><a class="dropdown-item" href="#">List group</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                </div>    
+            </nav>
+        </header>
+        <main>
+            <section class="bg-dark text-light p-4" id="intro" >
+                <div class="container text-center text-sm-start">
+                    <div class="d-sm-flex align-items-center justify-content-center"> <!--Made the items to flex when they cross the mobile breakpoint-->
+                        <div > 
+                            <img src="img/hello.jpg" class="img-fluid rounded-circle" alt="Hello on a screen"> <!--Made the image responsive and round-->
+                        </div>
+                        <div class="p-4">
+                            <h1>Welcome to the Bootstrap Wold!</h1>
+                            <p class="lead">  <!--stand out the paragraph-->
+                                Learn about Bootstrap.<br>
+                                What is it? How to use it? And more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container p-4 px-sm-0">
+                    <h2 class="text-center p-4">What is Bootstrap?</h2>
+                    <div class="row"> <!--Set the grid rows-->
+                      <div class="col-sm"> <!--Set equal-width columns in the grid across all devices and viewports-->
+                        <p>
+                            Bootstrap is an open-source framework that helps developers to speeds up build responsive mobile-first websites. This toolkit is for HTML, CSS, and JS development. 
+                            Bootstrap allows you to create web pages that are both quick and responsive. It is the world's most popular front-end open-source toolkit. You can quickly build and configure responsive mobile-first sites with Sass variables and mixins, a responsive grid system, a large number of prebuilt components and powerful JavaScript plugins.
+                            Bootstrap is constantly updating all the material and adding functions; it is right now in version 5.0.2.
+                        </p>
+                      </div>
+                      <div class="col-sm">
+                        <p>
+                             This open-source toolkit includes plenty of material development that is ready to use. Among the most popular functions are grid, typography, icons, etc. All of these functions are easy to find on the bootstrap website. On the left-hand side of the site, you will find all the documentation divider by topic that the developer will need to understand and use this framework. On the right-hand side of each page, you will find all the topics for that particular page. Also, you can find on the left side above a search bar where you can write the name of the topic you are looking for.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="alert alert-primary d-flex align-items-center  alert-dismissible fade show" role="alert">
+                            <strong>In other words, by adding Bootstrap to the HTML, the developer will add the bootstrap classes to visually change the output of the code that they have already semantically in place.</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </section>
+            <section id="mobile">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center p-4">
+                        <div class="col-sm">
+                            <img src="img/mobile.jpg" class="img-fluid rounded-3 mx-auto d-block " alt="mobile"> <!--Made the image responsive and round-->
+                        </div>
+                        <div class="col-sm py-4">
+                            <h2>Mobile First</h2>
+                            <p class="">  
+                                    Bootstrap is mobile-first, which means they optimize code for mobile devices first and then scale up components using CSS media queries as appropriate. Furthermore, owing to a twelve column system, five preset responsive tiers, Sass variables and mixins, and hundreds of predefined classes, Bootstrap provides a robust mobile-first flexbox grid to construct layouts of all shapes and sizes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="layout">
+                <div class="container p-4">
+                    <div class="row">
+                        <div class="col-sm"> 
+                            <h2>Layout</h2>
+                            <p>
+                                With the layout options, the developer can give some structure to the website. Some of the possibilities that the Bootstrap layout have are: 
+                            </p>
+                            <ul class="">
+                                  <li>Forms.</li>
+                                  <li>Utilities.</li>
+                                  <li>Form grid.</li>
+                                  <li>Gutters.</li>
+                                  <li>Horizontal form.</li>
+                                  <li>Column sizing.</li>
+                                  <li>Inline forms.</li>
+                          </ul>
+                        </div>
+                        <div class="col-sm"> 
+                            <img src="img/layout.jpg" class="img-fluid rounded-3 mx-auto d-block" alt="mobile and screen">
+                        </div>
+                    </div>
+                  
+
+                </div>
+
+            </section>
+            <section class="bg-dark text-light" id="components p-4">
+                <h2 class="text-center p-4">Components</h2>
+                <div class="container p-4" id="c-library">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Components Library</h3>
+                            <p>Bootstrap contains a large component library that covers everything from:</p>
+                            <ul class="">
+                                    <li>Buttons.</li>
+                                    <li>Theme colours.</li>
+                                    <li>Icons.</li>
+                                    <li>Grids.</li>
+                                    <li>Lists to carousels and modals.</li>
+                                    <li>You can even create your own component too.</li>
+                            </ul>
+                            <p>
+                                Components are simple to use and do not require any prior understanding of JavaScript. Nearly two dozen components are included in Bootstrap. Therefore, they are ready to be immediately used.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img src="img/components.jpg"  class="img-fluid rounded-3 mx-auto d-block " alt="screen projecting UX elements"> <!--Set the image with rounded corners and in the middle of the col-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="alert">
+                <div class="container py-4">
+                    <h3>Alerts</h3>
+                    <p>Provide contextual feedback messages for user typical interactions with the functions of available and flexible alert messages.</p>
+                    <div class="row">
+                        <div class="col-sm py-4"> <!--py-4: set the padding for top and bottom  -->
+                            <h4>Simple primary alert</h4>
+                            <p>Alerts for any amount of text are provided, as well as an optional close button. Use one of the eight needed contextual classes for the correct style.</p>
+                            <div class="alert alert-primary" role="alert">
+                                A simple primary alert!
+                            </div>
+
+                        </div>
+                        <div class="col-sm py-4">
+                            <h4>Link Colour</h4>
+                            <p>To easily offer matching coloured links within any alert, use the—alert-link utility class.</p>
+                            <div class="alert alert-primary" role="alert">
+                                A simple primary alert with <a href="#" class="alert-link">an example link</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm py-4">
+                            <h4>Icons inside of an alert</h4>
+                            <p>You may wish to add additional utilities or custom designs depending on your icons and content. For example, you can create alerts with icons using flexbox utilities and bootstrap icons.</p>
+                            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                                <div>
+                                  An example alert with an icon
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm py-4">
+                            <h4>Dismissing</h4>
+                            <p>Any alert inline may be dismissed using the alert JS plugin.</p>
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                 An example alert with dismiss option!
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <p><strong>Note:</strong> You can also add additional HTML elements like headings, paragraphs and dividers to an alert.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-dark text-light" id="breadcrumbs">
+                <div class="container p-4">
+                   
+                    <div class="row">
+                      <div class="col-sm">
+                        <h3>Breadcrumbs</h3>
+                        <p>Indicate the current page's position inside a navigational hierarchy with dividers added automatically by CSS.</p>
+                        <p>To make a simply designed breadcrumb, use an ordered or unordered list with linked list items. Using Bootstrap tools, you may add as many styles as you like.</p>
+                        <h5>Example</h5>
+                        <nav aria-label="breadcrumb text-light">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            </ol>
+                          </nav>
+                          
+                          <nav aria-label="breadcrumb text-light">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            </ol>
+                          </nav>
+                          
+                          <nav aria-label="breadcrumb text-light">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item"><a href="#">Library</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Data</li>
+                            </ol>
+                          </nav>
+                      </div>
+                      <div class="col-sm">
+                        <h4>Dividers</h4>
+                        <p>
+                            Dividers are only visual; several types of bullets can be used as dividers. Dividers are used in navbars to divide topics or anywhere in the document to create more organization by dividing content. They are automatically added in CSS. They can be changed by modifying a local CSS custom property --bs-breadcrumb-divider, or through the $breadcrumb-divider Sass variable — and $breadcrumb-divider-flipped.
+                        </p>
+                        <h5>Example</h5>
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            </ol>
+                          </nav>
+                      </div>
+                    </div>
+                    <div class="alert alert-light fs-6" role="alert">
+                        <strong>Reference:</strong> <br> 
+                        Bootstrap team. (2021). Bootstrap. Getbootstrap. https://getbootstrap.com <br>
+                        Algonquin. (2020). Bootstrap This! | MTM6201. Imdac. https://imdac.github.io/mtm6201/exercises/bootstrap-this.html
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container p-2 d-flex justify-content-end">
+                    <strong>© 2021 Andrea Tous </strong>
+            </div>
+        </footer>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
