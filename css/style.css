@@ -1,0 +1,266 @@
+body{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+}
+
+h1,h2,h3{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+nav{
+    background-color: #0E2E49;
+    color: rgb(255, 255, 255);
+}
+
+#search, #search2 { /*envelope write the shape of the search bar to adapt it to the layout*/
+    width: 174px;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white ;
+}
+
+.welcome{
+    background-image: url("../img/banner.png");
+    width: auto;
+    height: 500PX;
+    background-position: right; /*Set the image in its rightful place to work properly in all the screens*/
+    background-repeat: no-repeat;
+}
+
+.welcome-text{ /* Set the text in the right spot*/
+    padding: 300px 0px 0px 40px;  
+}
+.welcome a, .lastest-work a{
+    background-color: #0E2E49;
+    padding: 12px 24px 12px 24px;
+    border-radius: 30px;
+    text-decoration:none;
+    color: white;
+}
+
+.lastest-work {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.lastest-work-text {
+    text-align: center;
+}
+
+.lastest-work-button{
+    display: flex; /*Set the button in the middle of the page*/
+    justify-content: center;
+    
+}
+
+.lastest-work-one, .lastest-work-two, .lastest-work-three, .lastest-work-four , .lastest-work-five, .lastest-work-six{
+    background-color: violet;
+}
+
+
+
+footer{
+    background-color: #0E2E49;
+    color: white;
+}
+.footer-container{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: 100px 1fr 1fr 50px;
+    grid-template-areas: 
+    "logof logof"
+    "navf search"
+    "contact contact"
+    "copyright copyright";
+}
+.footer-logo{
+    grid-area: logof;
+    text-align: center;
+}
+.nav-footer{
+    grid-area: navf;
+}
+.contact-footer{
+    grid-area: contact;
+}
+.contact-footer li p{
+    padding-left: 5px;
+    display:inline-flex; /*set the text inline with the icon*/
+}
+.search-footer{
+    grid-area: search;
+    display: flex;
+    justify-content:flex-end;
+}
+.copy-footer{
+    grid-area: copyright;
+    text-align: center;
+}
+/********************************************PORTFOLIO PAGE*****************************************/
+.title{
+    font-size: 2rem;
+    text-align: center;
+}
+.portfolio-text, .portfolio-ux, .portfolio-graphic, .portfolio-web,.portfolio-photo{
+    background-color: violet;
+}
+.portfolio{
+    
+    display: grid;
+    grid-gap: 20px;
+}
+/********************************************ABOUT PAGE*****************************************/
+.about{
+    display: grid;
+    grid-gap: 20px;
+}
+.about-title,.about-welcome,.about-photo,.about-profile{
+    background-color: violet;
+}
+.about-profile li{
+    display:flex; /*set the text inline with the social media images*/
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+}
+.about-profile p{
+    padding-left: 10px;
+}
+
+/********************************************CONTACT PAGE*****************************************/
+.contact{
+    display: grid;
+    grid-gap: 20px;
+}
+.contact-title, .contact-welcome,.contact-email,.contact-phone,.contact-linkedin,.contact-behance,.contact-facebook, .contact-instagram{
+    background-color: violet;
+}
+
+@media (min-width: 800px){
+    .welcome-text{
+        padding: 40px;
+    }
+    .lastest-work {
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "text text"
+        "ux graphic-cream "
+        "graphic-frog web "
+        "graphic-brand photography "
+        "button button";
+    }
+
+    .lastest-work-text{
+        grid-area: text;
+    }
+    .lastest-work-one{
+        grid-area: ux;
+    }
+    .lastest-work-two{
+        grid-area: graphic-cream;
+    }
+    .lastest-work-three{
+        grid-area: graphic-frog;
+    }
+    .lastest-work-four{
+        grid-area: web;
+    }
+    .lastest-work-five{
+        grid-area: graphic-brand;
+    }
+    .lastest-work-six{
+        grid-area: photography;
+    }
+    .lastest-work-button{
+        grid-area: button;
+    }
+   
+    .footer-container{
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template-areas: 
+        "logof navf contact search"
+        "logof navf contact copyright";
+    }
+    .copy-footer{
+        display: flex;
+        align-items: flex-end;
+        justify-content:flex-end
+    }
+    /********************************************PORTFOLIO PAGE*****************************************/
+    .portfolio{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 1fr 1fr ;
+        grid-template-areas: 
+        "title title"
+        "ux graphic"
+        "web photo";
+    }
+    .portfolio-text{
+        grid-area: title;
+    }
+    .portfolio-ux{
+        grid-area: ux;
+    }
+    .portfolio-graphic{
+        grid-area: graphic;
+    }
+    .portfolio-web{
+        grid-area: web;
+    }
+    .portfolio-photo{
+        grid-area: photo;
+    }
+    /********************************************ABOUT PAGE*****************************************/
+    .about{
+        grid-template-columns:repeat(2, 1fr) ;
+        grid-template-rows:50px 1fr 1fr ;
+        grid-template-areas:
+        "about-title about-title"
+        "about-welcome image"
+        "profile profile" ;
+    }
+    .about-title{
+        grid-area: about-title;
+    }
+    .about-welcome{
+        grid-area: about-welcome;
+    }
+    .about-photo{
+        grid-area: image;
+
+    }
+    .about-profile{
+        grid-area: profile;
+        justify-content: center;
+    }
+
+    
+
+    /********************************************CONTACT PAGE*****************************************/
+}   
+
+@media (min-width: 1280px) {
+    .lastest-work {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "text text text"
+        "ux graphic-cream graphic-frog "
+        "web graphic-brand photography"
+        "button button button";
+    }
+    /********************************************ABOUT PAGE*****************************************/
+    .about {
+        grid-template-areas:
+        "about-title about-title"
+        "about-welcome image"
+        "profile  image" ;
+    }
+}
