@@ -110,7 +110,6 @@ footer{
     background-color: violet;
 }
 .portfolio{
-    
     display: grid;
     grid-gap: 20px;
 }
