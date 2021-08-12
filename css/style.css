@@ -26,7 +26,7 @@ nav{
 .welcome{
     background-image: url("../img/banner.png");
     width: auto;
-    height: 500PX;
+    height: 500px;
     background-position: right; /*Set the image in its rightful place to work properly in all the screens*/
     background-repeat: no-repeat;
 }
@@ -51,6 +51,11 @@ nav{
     text-align: center;
 }
 
+.lastest-work img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
 .lastest-work-button{
     display: flex; /*Set the button in the middle of the page*/
     justify-content: center;
@@ -60,8 +65,6 @@ nav{
 .lastest-work-one, .lastest-work-two, .lastest-work-three, .lastest-work-four , .lastest-work-five, .lastest-work-six{
     background-color: violet;
 }
-
-
 
 footer{
     background-color: #0E2E49;
@@ -113,34 +116,49 @@ footer{
     display: grid;
     grid-gap: 20px;
 }
+
+.portfolio img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
 /********************************************ABOUT PAGE*****************************************/
 .about{
     display: grid;
     grid-gap: 20px;
 }
-.about-title,.about-welcome,.about-photo,.about-profile{
-    background-color: violet;
+.about-profile{
+    display: grid;
+    grid-gap: 10px;
 }
-.about-profile li{
-    display:flex; /*set the text inline with the social media images*/
+.about-location, .about-email,.about-phone,.about-behance{
+    
+    display:flex; /*set the text inline with the icons*/
     align-items: center;
-    padding: 10px 0px 10px 0px;
 }
-.about-profile p{
+.about-profile p {
     padding-left: 10px;
+    margin: unset;
 }
-
+.about-title-profile h2{
+    margin: unset;
+}
+.about-photo{
+   display: flex;
+   justify-content: center;
+   
+}
+.about-photo img{
+    border-radius: 20px;
+}
 /********************************************CONTACT PAGE*****************************************/
 .contact{
     display: grid;
     grid-gap: 20px;
 }
-.contact-title, .contact-welcome,.contact-email,.contact-phone,.contact-linkedin,.contact-behance,.contact-facebook, .contact-instagram{
-    background-color: violet;
-}
 
 .contact-email,.contact-phone,.contact-linkedin,.contact-behance,.contact-facebook, .contact-instagram{
-    display:flex; /*set the text inline with the social media images*/
+    display:flex; /*set the text inline with the icons*/
     align-items: center;
 }
 
@@ -153,7 +171,7 @@ footer{
         padding: 40px;
     }
     .lastest-work {
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: 50px 1fr 1fr 1fr 50px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
         "text text"
@@ -228,10 +246,11 @@ footer{
     /********************************************ABOUT PAGE*****************************************/
     .about{
         grid-template-columns:repeat(2, 1fr) ;
-        grid-template-rows:50px 1fr 1fr ;
+        grid-template-rows:50px 1fr 30px 200px ;
         grid-template-areas:
         "about-title about-title"
         "about-welcome image"
+        "about-title-profile about-title-profile"
         "profile profile" ;
     }
     .about-title{
@@ -246,7 +265,23 @@ footer{
     }
     .about-profile{
         grid-area: profile;
-        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        "about-location about-phone"
+        "about-email about-behance" ; 
+    }
+    .about-location{
+        grid-area: about-location;
+    }
+    .about-email{
+        grid-area: about-email;
+    }
+    .about-phone{
+        grid-area: about-phone;
+    }
+    .about-behance{
+        grid-area: about-behance;
     }
 
     /********************************************CONTACT PAGE*****************************************/
@@ -288,7 +323,7 @@ footer{
 
 @media (min-width: 1280px) {
     .lastest-work {
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: 50px 1fr 1fr 50px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
         "text text text"
@@ -301,6 +336,7 @@ footer{
         grid-template-areas:
         "about-title about-title"
         "about-welcome image"
+        "about-title-profile image "
         "profile  image" ;
     }
     /********************************************CONTACT PAGE*****************************************/
