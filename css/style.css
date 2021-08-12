@@ -139,6 +139,15 @@ footer{
     background-color: violet;
 }
 
+.contact-email,.contact-phone,.contact-linkedin,.contact-behance,.contact-facebook, .contact-instagram{
+    display:flex; /*set the text inline with the social media images*/
+    align-items: center;
+}
+
+.contact-email p,.contact-phone p,.contact-linkedin p,.contact-behance p,.contact-facebook p, .contact-instagram p{
+    padding-left: 10px;
+}
+
 @media (min-width: 800px){
     .welcome-text{
         padding: 40px;
@@ -240,9 +249,41 @@ footer{
         justify-content: center;
     }
 
-    
-
     /********************************************CONTACT PAGE*****************************************/
+    .contact{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 200px 1fr 1fr 1fr;
+        grid-template-areas: 
+        "contact-title contact-title"
+        "contact-welcome contact-welcome"
+        "contact-email contact-behance"
+        "contact-phone contact-facebook"
+        "contact-linkedin contact-instagram";
+    }
+    .contact-title{
+        grid-area: contact-title;
+    }
+    .contact-welcome{
+        grid-area: contact-welcome;
+    }
+    .contact-email{
+        grid-area: contact-email;
+    }
+    .contact-phone{
+        grid-area: contact-phone;
+    }
+    .contact-linkedin{
+        grid-area: contact-linkedin;
+    }
+    .contact-behance{
+        grid-area: contact-behance;
+    }
+    .contact-facebook{
+        grid-area: contact-facebook;
+    }
+    .contact-instagram{
+        grid-area: contact-instagram;
+    }
 }   
 
 @media (min-width: 1280px) {
@@ -261,5 +302,16 @@ footer{
         "about-title about-title"
         "about-welcome image"
         "profile  image" ;
+    }
+    /********************************************CONTACT PAGE*****************************************/
+    .contact{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 50px 200px 1fr 1fr ;
+        grid-template-areas: 
+        "contact-title contact-title contact-title"
+        "contact-welcome contact-welcome contact-welcome"
+        "contact-email contact-linkedin contact-facebook"
+        "contact-phone contact-behance contact-instagram"
+        ;
     }
 }
