@@ -2,27 +2,22 @@ body{
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
 }
-
 h1,h2,h3{
     font-family: 'Playfair Display', serif;
     font-weight: bold;
 }
-
 nav{
     background-color: #0E2E49;
     color: rgb(255, 255, 255);
 }
-
 #search, #search2 { /*envelope write the shape of the search bar to adapt it to the layout*/
     width: 174px;
     border-radius: 30px;
     margin-left: 20px;
 }
-
 .navbar-dark .navbar-nav .nav-link{
     color: white ;
 }
-
 .welcome{
     background-image: url("../img/banner.png");
     width: auto;
@@ -30,27 +25,23 @@ nav{
     background-position: right; /*Set the image in its rightful place to work properly in all the screens*/
     background-repeat: no-repeat;
 }
-
 .welcome-text{ /* Set the text in the right spot*/
     padding: 300px 0px 0px 40px;  
 }
-.welcome a, .lastest-work a{
+.blue-button{
     background-color: #0E2E49;
     padding: 12px 24px 12px 24px;
     border-radius: 30px;
     text-decoration:none;
     color: white;
 }
-
 .lastest-work {
     display: grid;
     grid-gap: 20px;
 }
-
 .lastest-work-text {
     text-align: center;
 }
-
 .lastest-work img{
     width: 100%;
     height: auto;
@@ -61,11 +52,6 @@ nav{
     justify-content: center;
     
 }
-
-.lastest-work-one, .lastest-work-two, .lastest-work-three, .lastest-work-four , .lastest-work-five, .lastest-work-six{
-    background-color: violet;
-}
-
 footer{
     background-color: #0E2E49;
     color: white;
@@ -104,7 +90,7 @@ footer{
     grid-area: copyright;
     text-align: center;
 }
-/********************************************PORTFOLIO PAGE*****************************************/
+ /********************************************PORTFOLIO PAGE*****************************************/
 .title{
     font-size: 2rem;
     text-align: center;
@@ -113,13 +99,57 @@ footer{
     display: grid;
     grid-gap: 20px;
 }
-
 .portfolio img{
     width: 100%;
     height: auto;
     max-width: 100%;
 }
-/********************************************ABOUT PAGE*****************************************/
+
+ /********************************************UX PAGE*****************************************/
+.ux{
+    display: grid;
+    grid-gap: 20px;
+}
+.ux img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+ /********************************************WEB PAGE*****************************************/
+.web{
+    display: grid;
+    grid-gap: 20px;
+}
+
+.web img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+ /********************************************PHOTOGRAPHY PAGE*****************************************/
+.photography{
+    display: grid;
+    grid-gap: 20px;
+}
+
+.photography img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+ /********************************************GRAPHIC DESIGN PAGE*****************************************/
+ .graphic{
+    display: grid;
+    grid-gap: 20px;
+}
+
+.graphic img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+ /********************************************ABOUT PAGE*****************************************/
 .about{
     display: grid;
     grid-gap: 20px;
@@ -148,17 +178,15 @@ footer{
 .about-photo img{
     border-radius: 20px;
 }
-/********************************************CONTACT PAGE*****************************************/
+ /********************************************CONTACT PAGE*****************************************/
 .contact{
     display: grid;
     grid-gap: 20px;
 }
-
 .contact-email,.contact-phone,.contact-linkedin,.contact-behance,.contact-facebook, .contact-instagram{
     display:flex; /*set the text inline with the icons*/
     align-items: center;
 }
-
 .contact-email p,.contact-phone p,.contact-linkedin p,.contact-behance p,.contact-facebook p, .contact-instagram p{
     padding-left: 10px;
 }
@@ -177,7 +205,6 @@ footer{
         "graphic-brand photography "
         "button button";
     }
-
     .lastest-work-text{
         grid-area: text;
     }
@@ -202,7 +229,6 @@ footer{
     .lastest-work-button{
         grid-area: button;
     }
-   
     .footer-container{
         grid-template-columns:repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -216,7 +242,7 @@ footer{
         align-items: flex-end;
         justify-content:flex-end
     }
-    /********************************************PORTFOLIO PAGE*****************************************/
+     /********************************************PORTFOLIO PAGE*****************************************/
     .portfolio{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 50px 1fr 1fr ;
@@ -240,7 +266,105 @@ footer{
     .portfolio-photo{
         grid-area: photo;
     }
-    /********************************************ABOUT PAGE*****************************************/
+     /********************************************UX PAGE*****************************************/
+     .ux{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 1fr 1fr ;
+        grid-template-areas: 
+        "title title"
+        "ux-work-one ux-work-two"
+        "ux-work-three ux-work-four";
+    }
+    .ux-text{
+        grid-area: title;
+    }
+    .ux-work-one{
+        grid-area: ux-work-one;
+    }
+    .ux-work-two{
+        grid-area: ux-work-two;
+    }
+    .ux-work-three{
+        grid-area: ux-work-three;
+    }
+    .ux-work-four{
+        grid-area: ux-work-four;
+    }
+     /********************************************WEB PAGE*****************************************/
+    .web{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 1fr 1fr ;
+    grid-template-areas: 
+    "title title"
+    "ux-work-one ux-work-two"
+    "ux-work-three ux-work-four";
+    }
+    .web-text{
+        grid-area: title;
+    }
+    .web-work-one{
+        grid-area: ux-work-one;
+    }
+    .web-work-two{
+        grid-area: ux-work-two;
+    }
+    .web-work-three{
+        grid-area: ux-work-three;
+    }
+    .web-work-four{
+        grid-area: ux-work-four;
+    }
+     /********************************************PHOTOGRAPHY PAGE*****************************************/
+    .photography{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 1fr 1fr ;
+        grid-template-areas: 
+        "title title"
+        "photography-work-one photography-work-two"
+        "photography-work-three photography-work-four";
+    }
+    .photography-text{
+        grid-area: title;
+    }
+    .photography-work-one{
+        grid-area: photography-work-one;
+    }
+    .photography-work-two{
+        grid-area: photography-work-two;
+    }
+    .photography-work-three{
+        grid-area: photography-work-three;
+    }
+    .photography-work-four{
+        grid-area: photography-work-four;
+    }
+     /********************************************GRAPHIC DESIGN PAGE*****************************************/
+     .graphic{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 1fr 1fr ;
+        grid-template-areas: 
+        "title title"
+        "graphic-work-one graphic-work-two"
+        "graphic-work-three graphic-work-four";
+    }
+    .graphic-text{
+        grid-area: title;
+    }
+    .graphic-work-one{
+        grid-area: graphic-work-one;
+    }
+    .graphic-work-two{
+        grid-area: graphic-work-two;
+    }
+    .graphic-work-three{
+        grid-area: graphic-work-three;
+    }
+    .graphic-work-four{
+        grid-area: graphic-work-four;
+    }
+    
+
+     /********************************************ABOUT PAGE*****************************************/
     .about{
         grid-template-columns:repeat(2, 1fr) ;
         grid-template-rows:50px 1fr 30px 200px ;
