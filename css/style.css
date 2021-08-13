@@ -19,7 +19,7 @@ nav{
     color: white ;
 }
 .welcome{
-    background-image: url("../img/banner.png");
+    background-image: url("../img/banner.jpg");
     width: auto;
     height: 500px;
     background-position: right; /*Set the image in its rightful place to work properly in all the screens*/
@@ -34,6 +34,11 @@ nav{
     border-radius: 30px;
     text-decoration:none;
     color: white;
+}
+.blue-button:hover {
+    color: #0E2E49;
+    background-color:white;
+    
 }
 .lastest-work {
     display: grid;
