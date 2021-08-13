@@ -181,7 +181,9 @@ footer{
    
 }
 .about-photo img{
-    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 
 }
  /********************************************CONTACT PAGE*****************************************/
@@ -371,14 +373,14 @@ footer{
     
 
      /********************************************ABOUT PAGE*****************************************/
-    .about{
-        grid-template-columns: 1fr 350px ;
-        grid-template-rows:50px 1fr 30px 200px ;
+     .about{
+        grid-template-columns: 1fr 360px ;
+        grid-template-rows:50px 1fr 30px 1fr ;
         grid-template-areas:
         "about-title about-title"
         "about-welcome image"
-        "about-title-profile about-title-profile"
-        "profile profile" ;
+        "about-title-profile image"
+        "profile image" ;
     }
     .about-title{
         grid-area: about-title;
@@ -398,8 +400,12 @@ footer{
         "about-location about-phone"
         "about-email about-behance" ; 
     }
+    .about-location,.about-email,.about-phone,.about-behance {
+        font-size: 16px;
+    }
     .about-location{
         grid-area: about-location;
+       
     }
     .about-email{
         grid-area: about-email;
@@ -459,12 +465,8 @@ footer{
         "button button button";
     }
     /********************************************ABOUT PAGE*****************************************/
-    .about {
-        grid-template-areas:
-        "about-title about-title"
-        "about-welcome image"
-        "about-title-profile image "
-        "profile  image" ;
+    .about{
+        grid-template-columns: 1fr 390px ;
     }
     /********************************************CONTACT PAGE*****************************************/
     .contact{
